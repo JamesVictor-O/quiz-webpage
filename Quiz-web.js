@@ -57,15 +57,21 @@ const questions =[
   btn.addEventListener("click",()=>{
     
     inputValue=getValue()
-    if(inputValue===""){
+    if(Input.value===""){
         Input.style.border="2px solid red";
-        // Input.setAttribute("placeholder", "please input answer")
-       
-    }else if(inputValue===questions[Quiz_num].ans){
-        correct++;
-         Quiz_num++;
-         Input.style.border="1px solid green"
-     }
+    }
+    if(Input.value !== ""){
+        if(inputValue === questions[Quiz_num].ans){
+          alert("yes")
+          correct++;
+        }else{
+          wrong++;
+        }
+        Quiz_num++;
+        Input.style.border="2px solid green";
+        console.log(correct)
+    }
+
      if(Quiz_num < questions.length){
        load()
     }else{
@@ -79,7 +85,6 @@ const questions =[
       backBtn.style.display="block";
    }
     Input.value=""
-    
 
  })
   load()
