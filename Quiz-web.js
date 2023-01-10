@@ -1,28 +1,32 @@
 const questions =[
     {
-        ques: "how many local government do we have in nigeria?",
-        ans: "19"
+        ques: "which javascript method is use to remove the last element of an array?",
+        ans: "Pop()"
     },
     {
-        ques: "in which year did nigeria get independence",
-        ans: "1960"
+        ques: "an error that comes up while a program is running is called?",
+        ans: "Runtime error"
     },
     {
-        ques: "how many rivers do we have in nigeria?",
-        ans: "2"
+        ques: "Does javascript support automatic type conversation?",
+        ans: "yes"
     },
     {
         ques: "which year was apple-1 created",
         ans: "1976"
     },
     {
-        ques: "when did nigeria won her first african cup of nation",
-        ans: "1995"
+        ques: "Which is faster between javascript and an ASP script?",
+        ans: "javascript"
     },
     {
-        ques: "which year did derick rose won the mvp",
-        ans: "2001"
+        ques: "a function visible only within a function where it is define is called?",
+        ans: "Local variable"
     },
+    {
+      ques: "provides more details on an element like Iid,type,value",
+      ans: "Attribute"
+  }
 ];
  let Question_space=document.querySelector(".Quiz-questions");
  let Input=document.querySelector(".input-space");
@@ -41,7 +45,7 @@ const questions =[
     Question_space.innerHTML=Question.ques
   }
   function getValue(){
-    let input_value=Input.value;
+    let input_value=Input.value.toUpperCase();
     return input_value;
   }
 //   back button
@@ -61,7 +65,7 @@ const questions =[
         Input.style.border="2px solid red";
     }
     if(Input.value !== ""){
-        if(inputValue === questions[Quiz_num].ans){
+        if(inputValue === questions[Quiz_num].ans.toUpperCase()){
           alert("yes")
           correct++;
         }else{
