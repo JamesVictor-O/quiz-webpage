@@ -90,17 +90,4 @@ const questions =[
     Input.value=""
 
  })
-  load()*/
-
-  /*var letters=[];
-  var word="racecar"
-  var rword="";
-
-  for(let i=0; i<word.length; i++){
-    letters.push(word[i])
-  }
-
-  for(let i=0; i<word.length; i++){
-     rword += letters.pop(word[i])
-     console.log(rword)
-  }
+  load()
